@@ -4,6 +4,7 @@ import { setData } from './store';
 import Table from './Table';
 import Form from './Form';
 import { downloadExcel } from './utils';
+import './App.css';
 
 const columns = [
   { Header: 'Name', accessor: 'name' },
@@ -11,11 +12,10 @@ const columns = [
   { Header: 'Email', accessor: 'email' },
 ];
 
-const dummyData = [
-  { name: 'John Doe', age: 28, email: 'john@example.com' },
-  { name: 'Jane Doe', age: 32, email: 'jane@example.com' },
-  // Add more dummy data here
-];
+// const dummyData = [
+//   { name: 'John Doe', age: 28, email: 'john@example.com' },
+//   { name: 'Jane Doe', age: 32, email: 'jane@example.com' },
+// ];
 
 const App = () => {
   const dispatch = useDispatch();

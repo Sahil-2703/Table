@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { useTable, usePagination, useSortBy, useGlobalFilter } from 'react-table';
 
 const Table = ({ columns, data }) => {
@@ -11,7 +11,6 @@ const Table = ({ columns, data }) => {
     canPreviousPage,
     canNextPage,
     pageOptions,
-    pageCount,
     gotoPage,
     nextPage,
     previousPage,
