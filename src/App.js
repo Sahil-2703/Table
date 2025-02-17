@@ -6,6 +6,10 @@ import Form from './Form';
 import { downloadExcel } from './utils';
 import './App.css';
 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+
+
 const columns = [
   { Header: 'Name', accessor: 'name' },
   { Header: 'Age', accessor: 'age' },
@@ -31,11 +35,16 @@ const App = () => {
   };
 
   return (
-    <div>
-      <Form onSubmit={handleFormSubmit} />
-      <Table columns={columns} data={data} />
-      <button onClick={() => downloadExcel(data)}>Download Excel</button>
-    </div>
+    <Router>
+      <Sidebar/>
+      <Routes>
+        <Route path='/' element={<Form onSubmit={handleFormSubmit} />} />
+        <Route path='/table' element={<Table columns={columns} data={data} />} />
+      
+      
+      </Routes>
+      <button className='download-btn' onClick={() => downloadExcel(data)}>Download Excel</button>
+    </Router>
   );
 };
 
