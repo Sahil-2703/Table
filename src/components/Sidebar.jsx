@@ -25,7 +25,7 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-    background: #15171c;
+    background: black;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -42,7 +42,7 @@ const SidebarWrap = styled.div`
 `;
 
 const Sidebar = () => {
-    const [sidebar, setSidebar] = useState(false);
+    const [sidebar, setSidebar] = useState(true);
 
     const showSidebar = () => setSidebar(!sidebar);
 
@@ -55,7 +55,7 @@ const Sidebar = () => {
                             onClick={showSidebar}
                         />
                     </NavIcon>
-                    <h1
+                    {/* <h1
                         style={{
                             textAlign: "center",
                             marginLeft: "200px",
@@ -63,7 +63,7 @@ const Sidebar = () => {
                         }}
                     >
                         React Table
-                    </h1>
+                    </h1> */}
                 </Nav>
                 <SidebarNav sidebar={sidebar}>
                     <SidebarWrap>

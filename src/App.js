@@ -14,6 +14,11 @@ const columns = [
   { Header: 'Name', accessor: 'name' },
   { Header: 'Age', accessor: 'age' },
   { Header: 'Email', accessor: 'email' },
+  { Header: 'Phone Number', accessor: 'number' },
+  { Header: 'City', accessor: 'city' },
+  { Header: 'State', accessor: 'state' },
+  { Header: 'Country', accessor: 'Country' },
+  { Header: 'Address', accessor: 'address' },
 ];
 
 // const dummyData = [
